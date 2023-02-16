@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.sample.adq'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.sample.adq"
+        minSdk 21
+        //noinspection OldTargetApi
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        //-- FOR ADQ -------------------------------------------------------------------------------
+        debug {
+            ndk {
+                debugSymbolLevel 'SYMBOL_TABLE'
+            }
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            ndk {
+                debugSymbolLevel 'SYMBOL_TABLE'
+            }
+        }
+        //------------------------------------------------------------------------------------------
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //-- FOR ADQ -----------------------------------------------------------------------------------
+    lintOptions {
+        abortOnError false
+    }
+    //----------------------------------------------------------------------------------------------
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    //-- ADQ SDK -----------------------------------------------------------------------------------
+    implementation 'com.qwertlab.adq:ADQ:7.0.2'
+    //-- END ADQ SDK -------------------------------------------------------------------------------
+}
