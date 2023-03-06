@@ -84,8 +84,8 @@
 * 프로가드 설정
 
 
-> 프로가드를 사용하지 않는다면 이 단계를 건너뛰어주세요. <br>
-만약 귀사의 앱 프로젝트에서 프로가드를 사용중이시면 proguard-rules.pro 파일에 ADQ 라이브러리를 예외처리합니다.
+> proguard-rules.pro 파일에 ADQ SDK 정보를 예외처리합니다.
+
 
 <br>
 
@@ -137,7 +137,8 @@
 * 연동 API 호출
 
 > 귀사의 메인 액티비티의 onCreate() Method에 알람 권한이 없을 경우 권한을 요청합니다.<br>
-  QuickBar를 노출하기 위해서 알람 권한이 필요합니다.
+> (QuickBar를 노출하기 위해서 알람 권한이 필요합니다.) <br>
+> 귀사의 메인 액티비티의 onResume() Method에 알람 권한이 있을 경우 연동 API를 호출합니다.
   
 <br>
 
@@ -147,10 +148,7 @@
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ...
-        
         //-- ADQ Check Permission ------------------------------------------------------------------
-     
         if(!ADQManager.isNotificationPermission(getApplicationContext())){
             //-- Request Notification Permission. [For - QuickBar]
             ADQManager.requestADQPermission(MainActivity.this, registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
@@ -159,25 +157,13 @@
                 }
             }));
         }
-        
         //-- END ADQ -------------------------------------------------------------------------------
-        
-        ....
-        
+         
     }
-```
-
-<br>
-
-> 귀사의 메인 액티비티의 onResume() Method에 알람 권한이 있을 경우 연동 API를 호출합니다.
-<br>
-
-```java
+    
     @Override
     protected void onResume() {
         super.onResume();
-
-        ....
 
         //-- ADQ -----------------------------------------------------------------------------------
         
@@ -187,9 +173,9 @@
         
         //------------------------------------------------------------------------------------------
 
-        ...
-        
     }
+    
+    
 ```
 
 <br>
