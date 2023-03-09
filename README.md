@@ -1,7 +1,7 @@
 # ADQ
 # Sample Project
 
-> ADQ SDK 최신버전은 7.0.3 버전입니다
+> ADQ SDK 최신버전은 7.0.6 버전입니다
 
 자세한 내용은 <a href="https://api.qwertlab.com/adq/index.php" taregt="_blank">API Document 사이트</a>에서 확인해보실 수 있습니다.
 
@@ -70,7 +70,7 @@
         ...
         //-- FOR ADQ -------------------------------------------------------------------------------
         
-        implementation 'com.qwertlab.adq:ADQ:7.0.3'
+        implementation 'com.qwertlab.adq:ADQ:7.0.6'
         
         //------------------------------------------------------------------------------------------
         ...
