@@ -84,7 +84,7 @@
 * 프로가드 설정
 
 
-> proguard-rules.pro 파일에 ADQ SDK 정보를 예외처리합니다.
+> proguard-rules.pro 파일에 ADQ SDK 정보를 예외처리합니다. <br>
 > ADQ SDK 내부에서 사용중인 androidx 또한 반드시 예외처리해야합니다.
 
 
