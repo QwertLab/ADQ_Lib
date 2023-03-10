@@ -85,6 +85,7 @@
 
 
 > proguard-rules.pro 파일에 ADQ SDK 정보를 예외처리합니다.
+> ADQ SDK 내부에서 사용중인 androidx 또한 반드시 예외처리해야합니다.
 
 
 <br>
@@ -95,7 +96,10 @@
     #- For ADQ SDK
     
     -keep class com.qwertlab.adq.**{*;}
+    -keep class androidx.**{*;}
+
     -dontwarn com.qwertlab.adq.**
+    -dontwarn androidx.**
     
     ... 
           
