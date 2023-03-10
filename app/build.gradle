@@ -17,13 +17,8 @@ android {
 
     buildTypes {
         //-- FOR ADQ -------------------------------------------------------------------------------
-        debug {
-            ndk {
-                debugSymbolLevel 'SYMBOL_TABLE'
-            }
-        }
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             ndk {
                 debugSymbolLevel 'SYMBOL_TABLE'
@@ -49,8 +44,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
     //-- ADQ SDK -----------------------------------------------------------------------------------
-    implementation 'com.qwertlab.adq:ADQ:7.0.3'
+    implementation 'com.qwertlab.adq:ADQ:7.0.6'
     //-- END ADQ SDK -------------------------------------------------------------------------------
 }

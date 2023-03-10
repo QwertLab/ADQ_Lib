@@ -43,9 +43,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        /**
+         * If you want to use the Custom QuickBar function, please refer to the API Documents.
+         * (https://api.qwertlab.com/adq/api_doc.php#quickbar_api)
+         */
         //-- ADQ -----------------------------------------------------------------------------------
         if(ADQManager.isNotificationPermission(getApplicationContext())){
-            ADQManager.initADQ(MainActivity.this, "c67e9d88c5e208d38a5c8c66e35a8785", ADQConstants.FLAG_QUICK_BAR_CUSTOM);
+            ADQManager.initADQ(MainActivity.this, "c67e9d88c5e208d38a5c8c66e35a8785", ADQConstants.FLAG_QUICK_BAR_DEFAULT);
         }
         //------------------------------------------------------------------------------------------
     }

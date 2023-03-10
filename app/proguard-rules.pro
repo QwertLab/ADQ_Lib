@@ -22,4 +22,7 @@
 
 #- For ADQ SDK
 -keep class com.qwertlab.adq.**{*;}
+-keep class androidx.**{*;}
+
 -dontwarn com.qwertlab.adq.**
+-dontwarn androidx.**
