@@ -21,7 +21,7 @@
             google()
             mavenCentral()
             
-            //-- For ADQ SDK -----------------------------------
+            //-- Repository for Qwertlab SDK -----------------------------------
             maven { 
               url 'https://sdk.qwertlab.com/repository/internal' 
             }
