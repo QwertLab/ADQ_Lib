@@ -206,7 +206,7 @@
 
 * <a href="https://api.qwertlab.com/adq/api_doc.php">API Document</a>
 * <a href="https://api.qwertlab.com/adq/error_doc.php">오류해결</a>
-* <a href="https://agent.qwertlab.com/">회원가입</a>
+* <a href="https://agent.qwertlab.com/">회원가입(Agent사이트)</a>
 * <a href="https://www.qwertlab.com//">홈페이지</a>
 
 
