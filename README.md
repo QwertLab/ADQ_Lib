@@ -157,7 +157,7 @@
             //-- Request Notification Permission. [For - QuickBar]
             ADQManager.requestADQPermission(MainActivity.this, registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
                 if(ADQManager.isNotificationPermission(getApplicationContext())){
-                    ADQManager.initADQ(MainActivity.this, "c67e9d88c5e208d38a5c8c66e35a8785");
+                    ADQManager.initADQ(MainActivity.this, "Agent사이트에서 발급받은 AgentKey");
                 }
             }));
         }
@@ -172,7 +172,7 @@
         //-- ADQ -----------------------------------------------------------------------------------
         
         if(ADQManager.isNotificationPermission(getApplicationContext())){
-            ADQManager.initADQ(MainActivity.this, "c67e9d88c5e208d38a5c8c66e35a8785");
+            ADQManager.initADQ(MainActivity.this, "Agent사이트에서 발급받은 AgentKey");
         }
         
         //------------------------------------------------------------------------------------------
