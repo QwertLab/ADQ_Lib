@@ -1,7 +1,7 @@
 # ADQ
 # Sample Project
 
-> ADQ SDK 최신버전은 7.0.6 버전입니다
+> ADQ SDK 최신버전은 7.1.0 버전입니다
 
 자세한 내용은 <a href="https://api.qwertlab.com/adq/index.php" taregt="_blank">API Document 사이트</a>에서 확인해보실 수 있습니다.
 
@@ -70,39 +70,13 @@
         ...
         //-- FOR ADQ -------------------------------------------------------------------------------
         
-        implementation 'com.qwertlab.adq:ADQ:7.0.6'
+        implementation 'com.qwertlab.adq:ADQ:7.1.0'
         
         //------------------------------------------------------------------------------------------
         ...
     }
     
     ...
-```
-
-<br>
-
-* 프로가드 설정
-
-
-> proguard-rules.pro 파일에 ADQ SDK 정보를 예외처리합니다. <br>
-> ADQ SDK 내부에서 사용중인 androidx 또한 반드시 예외처리해야합니다.
-
-
-<br>
-
-```java
-   ... 
-
-    #- For ADQ SDK
-    
-    -keep class com.qwertlab.adq.**{*;}
-    -keep class androidx.**{*;}
-
-    -dontwarn com.qwertlab.adq.**
-    -dontwarn androidx.**
-    
-    ... 
-          
 ```
 
 <br>
